@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+venv/
+.env
+*.env
+
+# Ignore configuration files with sensitive information
+config.py
+
+# Ignore AWS credentials (אם יש לך תיקייה של AWS CLI)
+.aws/
+
+# Ignore log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
