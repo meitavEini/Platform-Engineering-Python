@@ -3,7 +3,7 @@ import os
 import json
 import re
 import botocore
-from config import *
+from resources.config import *
 
 # CHECKS IF THE NAME IS VALID
 def is_valid_bucket_name(bucket_name):

@@ -1,5 +1,5 @@
 import boto3
-from config import *
+from resources.config import *
 import botocore
 
 def is_cli_created_zone(zone_id, route53):
