@@ -231,13 +231,28 @@ def create_ec2_instance():
             exit()
         else:
             print("Invalid input! Please enter 'u' for Ubuntu, 'a' for Amazon Linux, or 'q' to quit.")
-                
+
+    while True:
+        type_choice = input("Enter instance type (press 't3' for Ubuntu, 't4' for Amazon Linux, or 'q' to quit): ").strip().lower()
+
+        if type_choice == 't3':
+            instance_type = INSTANCE_TYPE_T3
+            break
+        elif type_choice == 't4':
+            instance_type = INSTANCE_TYPE_T4G
+            break
+        elif type_choice == 'q':
+            print("Exiting program...")
+            exit()
+        else:
+            print("Invalid input! Please enter 't3' for t3.nano, 't4' for t4g.nano, or 'q' to quit.") 
+
     try:
         instances = ec2.create_instances(
             ImageId=image_id,
             MinCount=1,
             MaxCount=1,
-            InstanceType=INSTANCE_TYPE,
+            InstanceType=instance_type,
             KeyName=KEY_NAME,
             NetworkInterfaces=[
                 {
