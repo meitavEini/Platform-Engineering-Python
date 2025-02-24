@@ -383,12 +383,12 @@ def main():
 
     while True:  # Loop until valid value
         user_action_choice = input(
-    """\nBefore we start, tell me what you want to do with EC2:
-    1. Manage an instance (start/stop)
-    2. Delete an instance
-    3. Create a new instance
-    4. List all instances
-    \nEnter your choice (1-4): """)
+"""\nBefore we start, tell me what you want to do with EC2:
+1. Manage an instance (start/stop)
+2. Delete an instance
+3. Create a new instance
+4. List all instances
+\nEnter your choice (1-4): """)
 
         if user_action_choice in ACTION_MAP:
             ACTION_MAP[user_action_choice]()  # Calling the appropriate function.
